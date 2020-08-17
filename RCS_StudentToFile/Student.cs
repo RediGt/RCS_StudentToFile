@@ -18,10 +18,5 @@ namespace RCS_StudentContactsJson
             this.lastName = lastName;
             this.age = age;
         }
-
-        /*public void PrintInfo()
-        {
-            Console.WriteLine(name + "  " + lastName + "  " + age);
-        }*/
     }
 }

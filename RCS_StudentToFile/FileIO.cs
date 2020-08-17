@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RCS_StudentContactsJson
 {
@@ -16,6 +17,7 @@ namespace RCS_StudentContactsJson
 
             jsonString = JsonConvert.SerializeObject(stud, Formatting.Indented);
             File.WriteAllText(GetFile(), jsonString);
+            MessageBox.Show("Saved successfully");
         }
 
         public static List<Student> LoadFromFile()
