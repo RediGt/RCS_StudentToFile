@@ -17,15 +17,13 @@ namespace RCS_StudentContactsJson
         public Form1()
         {
             InitializeComponent();
-            //LoadFile();
+            LoadFile();
             dataGridView1.ClearSelection();
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            students.Add(new Student("Janis", "Jansons", 20));
-            DisplayInGrid();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
-        {
+        {                 
             if (tBoxFirstName.Text != "" && tBoxLastName.Text != "" && tBoxAge.Text != "")
             {
                 students.Add(new Student(tBoxFirstName.Text, tBoxLastName.Text, Convert.ToInt32(tBoxAge.Text)));
@@ -43,7 +41,11 @@ namespace RCS_StudentContactsJson
         {
             students = FileIO.LoadFromFile();
             if (students == null)
+            {
+                students = new List<Student>();
                 return;
+            }
+                
             DisplayInGrid();
         }
 

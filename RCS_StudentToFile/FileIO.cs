@@ -40,8 +40,7 @@ namespace RCS_StudentContactsJson
             catch
             {
                 List<Student> a = new List<Student>();
-                a.Add(new Student("Janis", "Jansons", 20));
-                return a;
+                return null;
             }
         }
 
