@@ -17,9 +17,11 @@ namespace RCS_StudentContactsJson
         public Form1()
         {
             InitializeComponent();
-            LoadFile();
+            //LoadFile();
             dataGridView1.ClearSelection();
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            students.Add(new Student("Janis", "Jansons", 20));
+            DisplayInGrid();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -75,7 +77,7 @@ namespace RCS_StudentContactsJson
         }
 
         private void DisplayDataRow()
-        {
+        {       
             tBoxFirstName.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
             tBoxLastName.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             tBoxAge.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();

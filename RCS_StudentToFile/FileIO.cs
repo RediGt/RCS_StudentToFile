@@ -39,7 +39,9 @@ namespace RCS_StudentContactsJson
             }
             catch
             {
-                return null;
+                List<Student> a = new List<Student>();
+                a.Add(new Student("Janis", "Jansons", 20));
+                return a;
             }
         }
 
