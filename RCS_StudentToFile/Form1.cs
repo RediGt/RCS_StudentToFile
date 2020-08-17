@@ -40,6 +40,8 @@ namespace RCS_StudentContactsJson
         private void LoadFile()
         {
             students = FileIO.LoadFromFile();
+            if (students == null)
+                return;
             DisplayInGrid();
         }
 
