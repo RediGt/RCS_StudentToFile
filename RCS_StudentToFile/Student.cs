@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RCS_StudentToFile
+namespace RCS_StudentContactsJson
 {
     class Student
     {

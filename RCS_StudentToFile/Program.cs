@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RCS_StudentToFile
+namespace RCS_StudentContactsJson
 {
     static class Program
     {

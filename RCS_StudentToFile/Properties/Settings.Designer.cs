@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RCS_StudentToFile.Properties
+namespace RCS_StudentContactsJson.Properties
 {
 
 

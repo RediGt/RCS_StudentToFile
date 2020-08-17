@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RCS_StudentToFile
+namespace RCS_StudentContactsJson
 {
     public partial class Form1 : Form
     {
@@ -28,6 +28,7 @@ namespace RCS_StudentToFile
             }
             SaveFile();
             ClearBoxes();
+            DisplayInGrid();
         }
 
         private void SaveFile()
@@ -38,6 +39,7 @@ namespace RCS_StudentToFile
         private void LoadFile()
         {
             students = FileIO.LoadFromFile();
+            DisplayInGrid();
         }
 
         private void ClearBoxes()
@@ -47,6 +49,16 @@ namespace RCS_StudentToFile
             tBoxAge.Text = "";
         }
 
-
+        private void DisplayInGrid()
+        {
+            dataGridView1.Rows.Clear();
+            foreach (var student in students)
+            {
+                int n = dataGridView1.Rows.Add();
+                dataGridView1.Rows[n].Cells[0].Value = student.name;
+                dataGridView1.Rows[n].Cells[1].Value = student.lastName;
+                dataGridView1.Rows[n].Cells[2].Value = student.age.ToString();
+            }
+        }
     }
 }

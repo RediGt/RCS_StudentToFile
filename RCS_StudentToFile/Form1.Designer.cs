@@ -1,4 +1,4 @@
-﻿namespace RCS_StudentToFile
+﻿namespace RCS_StudentContactsJson
 {
     partial class Form1
     {
