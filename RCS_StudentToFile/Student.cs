@@ -19,9 +19,9 @@ namespace RCS_StudentToFile
             this.age = age;
         }
 
-        public void PrintInfo()
+        /*public void PrintInfo()
         {
             Console.WriteLine(name + "  " + lastName + "  " + age);
-        }
+        }*/
     }
 }
